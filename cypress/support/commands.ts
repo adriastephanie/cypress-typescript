@@ -1,15 +1,13 @@
-import { loginButton, messageLogin, userNameInput, userPasswordInput } from "./locators";
-
 declare namespace Cypress {
-  interface Chainable<Subject>{
-    login(): Cypress.Chainable<any>;
-  }
+    interface Chainable<Subject> {
+      loginUi (user: string, pass: string, message: string): Chainable<Element>;
+    }
 }
 
-export function login(): void {
-  cy.visit('/');
-  cy.get(userNameInput).type('adria@teste.com');
-  cy.get(userPasswordInput).type('123') 
-  cy.get(loginButton).click();
-  cy.get(messageLogin).should('contain', 'Bem vindo, Adria!');
-}
+Cypress.Commands.add('loginUi', (user: string, pass: string, message: string) => {
+    cy.visit('/');
+    cy.get('[data-test=email]').type(user);
+    cy.get('[data-test=passwd]').type(pass); 
+    cy.get('.btn').click();
+    cy.get('.toast').should('contain', message);
+  });

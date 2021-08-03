@@ -1,8 +1,6 @@
-import { login } from "../support/commandsFuncional";
-
 describe("Log In", () => {
     it("Login", () => {
         // Login
-        login();
+        cy.loginUi('adria@teste.com', '123', 'Bem vindo, Adria!')
     });
 });
