@@ -1,25 +1,30 @@
-name: Test e2e
+name: E2E tests
 
-on: [push, pull_request]
+on:
+      push:
+        branches:
+          - master
+      pull_request:
+        types: [opened, synchronize, reopened]
+        branches:
+          - master
 
 jobs:
-  build:
-
+  cypress-run:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [14.x]
-
+    timeout-minutes: 10
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm i
-    - run: npm ci
-    - run: npm run build --if-present
-    - run: npm test
-    - name: Code coverage reporting
-      uses: coverallsapp/github-action@master
+      - name: Checkout
+        uses: actions/checkout@v1
+        with:
+          run: npm i
+          build: npm run build
+          start: npm start
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
+      - name: Run E2E test
+        uses: cypress-io/github-action@v1
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
+        with:
+          config: baseUrl=https://barrigarest.wcaquino.me
