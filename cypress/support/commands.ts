@@ -1,13 +1,17 @@
-declare namespace Cypress {
-    interface Chainable<Subject> {
-      loginUi (user: string, pass: string, message: string): Chainable<Element>;
+import { locators } from "./locatorsLoginUi";
+
+declare global {
+    namespace Cypress {
+        interface Chainable<Subject> {
+            loginUi (user: string, pass: string, message: string):  Cypress.Chainable<void>;
+        }
     }
 }
 
 Cypress.Commands.add('loginUi', (user: string, pass: string, message: string) => {
     cy.visit('/');
-    cy.get('[data-test=email]').type(user);
-    cy.get('[data-test=passwd]').type(pass); 
-    cy.get('.btn').click();
-    cy.get('.toast').should('contain', message);
-  });
+    cy.get(locators.userName).type(user);
+    cy.get(locators.userPassword).type(pass); 
+    cy.get(locators.btnLogin).click();
+    cy.get(locators.message).should('contain', message);
+});
