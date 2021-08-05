@@ -9,7 +9,9 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "test"
+    "test": "cypress run",
+    "cy:open": "cypress open",
+    "build": "build"
   },
   "repository": {
     "type": "git",
