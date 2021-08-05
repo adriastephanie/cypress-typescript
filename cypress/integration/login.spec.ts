@@ -1,4 +1,4 @@
-import { login } from "../support/commandsFuncional";
+import { login } from "../support/commandsLogin";
 
 describe("Log In", () => {
     it("Login sem parametros", () => {
