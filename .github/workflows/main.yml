@@ -1,30 +1,19 @@
-name: E2E tests
+name: Cypress Tests
 
-on:
-      push:
-        branches:
-          - master
-      pull_request:
-        types: [opened, synchronize, reopened]
-        branches:
-          - master
+on: [push]
 
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    container: cypress/browsers:node12.18.3-chrome87-ff82
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
         with:
-          run: npm i
-          build: npm run build
-          start: npm start
-        env:
-          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
-      - name: Run E2E test
-        uses: cypress-io/github-action@v1
-        env:
-          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
-        with:
-          config: baseUrl=https://barrigarest.wcaquino.me
+          build: yarn build
+          start: yarn start
+          browser: chrome
