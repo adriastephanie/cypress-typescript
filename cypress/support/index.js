@@ -14,8 +14,8 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import "./commandsFuncional";
-import "./commands";
+import "./commandsLogin";
+import "./commandsLoginUi";
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
