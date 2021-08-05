@@ -1,7 +1,7 @@
 import { login } from "../support/commandsFuncional";
 
 describe("Log In", () => {
-    it("Login", () => {
+    it("Login sem parametros", () => {
         // Login
         login();
     });
