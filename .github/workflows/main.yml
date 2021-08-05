@@ -1,7 +1,7 @@
 # .github/workflows/publish.yml
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
     paths:
       - 'package.json'
 
