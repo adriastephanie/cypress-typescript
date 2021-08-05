@@ -1,6 +1,8 @@
 # Cypress + Typescript
 ## _Repository with typescript project_
 
+![example branch master](https://github.com/adriastephanie/cypress-typescript/actionsgit)
+
 ## Tech
 
 - [cypress](https://www.cypress.io)
