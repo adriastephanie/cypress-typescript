@@ -1,0 +1,26 @@
+{
+  "name": "cypress-typescript",
+  "version": "1.0.0",
+  "description": "cypress e2e",
+  "main": "index.js",
+  "dependencies": {
+    "cypress": "^8.1.0",
+    "typescript": "^4.3.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "cypress run",
+    "cy:open": "cypress open",
+    "build": "build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adriastephanie/cypress-typescript.git"
+  },
+  "author": "adria stephanie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adriastephanie/cypress-typescript/issues"
+  },
+  "homepage": "https://github.com/adriastephanie/cypress-typescript#readme"
+}
