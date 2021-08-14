@@ -1,7 +1,7 @@
 # Cypress + Typescript
 ## _Repository with typescript project_
 
-![Github Badge](https://github.com/adriastephanie/cypress-typescript/actionsgit)
+![Build status](https://github.com/adriastephanie/cypress-typescript/actions/workflows/main.yml/badge.svg)
 
 ## Tech
 
