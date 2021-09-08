@@ -3,5 +3,6 @@
     "video": false,
     "screenshotOnRunFailure": false,
     "defaultCommandTimeout": 10000,
-    "chromeWebSecurity": false
+    "chromeWebSecurity": false,
+    "ignoreTestFiles": "auth.spec.ts"
 }
