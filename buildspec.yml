@@ -11,8 +11,11 @@ phases:
       - npm ci
   pre_build:
     commands:
-      - npm run test
+
+      - echo "we are in the pre build phase"
+      - npm run cy:verify
+      - npm run cy:info
   build:
     commands:
-      - npm run start:ci &
-      - npx cypress run --record
+      - echo "this is build section inside buildspec.yml file"
+      - npm run test

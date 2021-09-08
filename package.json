@@ -13,6 +13,10 @@
   "scripts": {
     "test": "cypress run",
     "cy:open": "cypress open", 
+    "cy:verify": "cypress verify",
+    "cy:info": "cypress info",
+    "cy:version": "cypress version",
+    "cy:chrome": "cypress run --browser chrome",
     "build": "build"
   },
   "repository": {

@@ -1,6 +1,7 @@
 {
-    "baseUrl": "https://trello.com",
+    "baseUrl": "https://seubarriga.wcaquino.me/",
     "video": false,
+    "screenshotOnRunFailure": false,
     "defaultCommandTimeout": 10000,
     "chromeWebSecurity": false
 }

@@ -4,7 +4,7 @@ describe("Log In google", () => {
         
     })
     it("Login com google parametros no teste", () => {
-        cy.visit('/signup'); 
+        cy.visit('https://trello.com/signup'); 
         cy.wait(2000);
         cy.get('#google').click();
         cy.wait(2000);

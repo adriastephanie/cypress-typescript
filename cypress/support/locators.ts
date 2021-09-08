@@ -1,4 +1,4 @@
-export const userNameInput = '[data-test=email]';
-export const userPasswordInput = '[data-test=passwd]';
+export const userNameInput = '#email';
+export const userPasswordInput = '#senha'; 
 export const loginButton = '.btn';
-export const messageLogin = '.toast';
+export const messageLogin = '.alert';
