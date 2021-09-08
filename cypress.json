@@ -1,4 +1,6 @@
 {
-    "baseUrl": "https://barrigareact.wcaquino.me/",
-    "video": false 
+    "baseUrl": "https://trello.com",
+    "video": false,
+    "defaultCommandTimeout": 10000,
+    "chromeWebSecurity": false
 }

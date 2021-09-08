@@ -16,6 +16,15 @@
 // Import commands.js using ES2015 syntax:
 import "./commandsLogin";
 import "./commandsLoginUi";
+import "./commands";
 
-// Alternatively you can use CommonJS syntax:
-// require('./commands')
+module.exports = (on, config) => {
+    // Manually added code down below:
+    on('before:browser:launch', (browser = {}, args) => {
+      if (browser.name === 'chrome') {
+        args.push('--disable-site-isolation-trials');
+  
+        return args
+      }
+    })
+  }

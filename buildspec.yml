@@ -1,0 +1,18 @@
+## buildspec.yml
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: latest
+    commands:
+      # Set COMMIT_INFO variables to send Git specifics to Cypress Dashboard when recording
+      # https://docs.cypress.io/guides/continuous-integration/introduction#Git-information
+      - npm ci
+  pre_build:
+    commands:
+      - npm run test
+  build:
+    commands:
+      - npm run start:ci &
+      - npx cypress run --record

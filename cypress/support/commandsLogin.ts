@@ -2,7 +2,7 @@ import { loginButton, messageLogin, userNameInput, userPasswordInput } from "./l
 
 declare namespace Cypress {
   interface Chainable<Subject>{
-    login(): Cypress.Chainable<any>;
+    clearLocalStorageSnapshot(): Cypress.Chainable<any>;
   }
 }
 
