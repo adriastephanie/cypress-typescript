@@ -20,8 +20,8 @@ phases:
       - echo "this is build section inside buildspec.yml file"
       - npm run test:report
 
-  reports: #New
-      files:
-        - '*.xml'
-      base-directory: '/cypress/reports' # Location of the reports
-      file-format: 'JUNITXML'
+reports: #New
+  files:
+    - '*.xml'
+    base-directory: '/cypress/reports' # Location of the reports
+    file-format: 'JUNITXML'
