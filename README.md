@@ -14,6 +14,22 @@
 npx cypress open
 npm i
 ```
+
+
+## Command Line
+
+Opens the Cypress Test Runner:
+
+```sh
+npm run cy:open
+```
+
+Running Cypress Tests in Headless mode:
+
+```sh
+npm run cy:ci
+```
+
 ## License
 
 MIT

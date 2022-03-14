@@ -12,10 +12,11 @@
   },
   "scripts": {
     "test": "cypress run",
-    "cy:open": "cypress open", 
+    "cy:open": "cypress open",
     "cy:verify": "cypress verify",
     "cy:info": "cypress info",
     "cy:version": "cypress version",
+    "cy:ci": "cypress run",
     "cy:chrome": "cypress run --browser chrome",
     "build": "build"
   },
