@@ -8,7 +8,8 @@
   },
   "devDependencies": {
     "cypress": "^8.3.1",
-    "cypress-localstorage-commands": "^1.5.0"
+    "cypress-localstorage-commands": "^1.5.0",
+    "mocha-junit-reporter": "^2.0.2"
   },
   "scripts": {
     "test": "cypress run",
@@ -17,6 +18,9 @@
     "cy:info": "cypress info",
     "cy:version": "cypress version",
     "cy:ci": "cypress run",
+    "test:report": "npm run test mocha test --reporter cypress-junit-reporter",
+    "delete:report": "rm cypress/reports/* || true",
+    "prereport": "npm run delete:reports",
     "cy:chrome": "cypress run --browser chrome",
     "build": "build"
   },

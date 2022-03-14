@@ -30,6 +30,10 @@ Running Cypress Tests in Headless mode:
 npm run cy:ci
 ```
 
+```sh
+npm install mocha-junit-reporter --save-dev
+```
+
 ## License
 
 MIT

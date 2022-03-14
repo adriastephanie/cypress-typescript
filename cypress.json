@@ -4,5 +4,14 @@
     "screenshotOnRunFailure": false,
     "defaultCommandTimeout": 10000,
     "chromeWebSecurity": false,
-    "ignoreTestFiles": "auth.spec.ts"
+    "ignoreTestFiles": "auth.spec.ts",
+    "screenshotOnRunFailure": false,
+    "video": false,
+    "reporter": "junit",
+    "reporterOptions": {
+        "mochaFile": "./cypress/reports/junit-output.xml",
+        "testsuitesTitle": "Suite-cypress-titulo",
+        "rootSuiteTitle":"cypress",
+        "toConsole": true
+    }
 }
