@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Suite-cypress-titulo" time="5.1220" tests="1" failures="0">
+  <testsuite name="cypress" timestamp="2022-03-15T01:39:07" tests="0" file="cypress/integration/login.spec.ts" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Log In" timestamp="2022-03-15T01:39:07" tests="1" time="5.1220" failures="0">
+    <testcase name="Log In Login sem parametros" time="5.1220" classname="Login sem parametros">
+    </testcase>
+  </testsuite>
+</testsuites>
