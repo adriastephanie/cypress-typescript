@@ -23,6 +23,6 @@ phases:
 reports:
   cypress_reports:
     files:
-      - '*'
+      - '*.xml'
     file-format: JunitXml
-    base-directory: 'reports'
+    base-directory: 'reports/'
